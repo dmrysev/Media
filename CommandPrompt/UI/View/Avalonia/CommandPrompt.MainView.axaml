@@ -11,7 +11,7 @@
       <MenuItem InputGesture="Enter" HotKey="Enter" Command="{Binding EnterKey}" IsEnabled="{Binding IsFocused}"/>
     </Menu>
     <ListBox DockPanel.Dock="Top" Margin="10 10 10 0" Name="CommandHistory" ItemsSource="{Binding CommandHistoryItems}" SelectedIndex="{Binding SelectedCommandHistoryIndex}" FontSize="6" AutoScrollToSelectedItem="True" MaxHeight="120" IsVisible="{Binding IsCommandHistoryVisible}" />
-    <TextBox DockPanel.Dock="Top" Margin="10 0 10 0" Name="CommandPromptInput" Watermark="Command prompt" Text="{Binding Input}" CaretIndex="{Binding CaretIndex, Mode=TwoWay}" FontSize="12" VerticalContentAlignment="Center" />
+    <TextBox DockPanel.Dock="Top" Margin="10 0 10 0" Name="CommandPromptInput" Watermark="Command prompt. Ctrl+E to focus." Text="{Binding Input}" CaretIndex="{Binding CaretIndex, Mode=TwoWay}" FontSize="12" VerticalContentAlignment="Center" />
     <ListBox DockPanel.Dock="Top" Margin="10 0 10 10" Name="AutoCompletion" ItemsSource="{Binding AutoCompletionItems}" SelectedIndex="{Binding SelectedAutoCompletionIndex}" FontSize="6" AutoScrollToSelectedItem="True" MaxHeight="120" IsVisible="{Binding IsAutoCompletionVisible}" />
   </DockPanel>
 </UserControl>

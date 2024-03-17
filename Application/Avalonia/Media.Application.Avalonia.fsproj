@@ -54,7 +54,4 @@
     <ProjectReference Include="..\IO\Media.IO.Application.fsproj" />
     <ProjectReference Include="..\UI\Core\Media.Application.UI.Core.fsproj" />
   </ItemGroup>
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="cd $(ProjectDir)/../../scripts; ./publish_revision.sh $(TargetDir)" />
-  </Target>  
 </Project>

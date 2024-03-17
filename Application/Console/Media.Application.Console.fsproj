@@ -17,7 +17,4 @@
   <ItemGroup>
     <ProjectReference Include="..\IO\Media.IO.Application.fsproj" />
   </ItemGroup>
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="cd $(ProjectDir)/../../scripts; ./publish_revision.sh $(TargetDir)" />
-  </Target>  
 </Project>
