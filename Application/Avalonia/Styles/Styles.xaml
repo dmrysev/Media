@@ -1,0 +1,44 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Design.PreviewWith>
+    <Border Padding="20">
+      <StackPanel Spacing="5">        
+        <TextBlock Text="Code Font Family" FontFamily="{StaticResource CodeFontFamily}" />
+      </StackPanel>
+    </Border>
+  </Design.PreviewWith>
+  <Styles.Resources>
+    <Thickness x:Key="PageMargin">40 0 40 0</Thickness>    
+    <FontFamily x:Key="CodeFontFamily">avares://Media.GUI.Avalonia/Assets/Fonts#Source Code Pro</FontFamily>     
+  </Styles.Resources>
+  <Style Selector="TextBlock.code">
+    <Setter Property="FontFamily" Value="{StaticResource CodeFontFamily}" />
+  </Style>
+  <Style Selector="TextBlock.label">
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="Foreground" Value="#c2c2c2" />
+  </Style>
+  <Style Selector="TextBlock.labelSmall">
+    <Setter Property="FontSize" Value="10" />
+    <Setter Property="Foreground" Value="#c2c2c2" />
+  </Style>
+  <Style Selector="CheckBox.label">
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="Foreground" Value="#c2c2c2" />
+  </Style>
+  <Style Selector="AutoCompleteBox">
+    <Setter Property="FontSize" Value="12" />
+  </Style>
+  <Style Selector="TextBox Border:pointerover">
+    <Setter Property="Background" Value="#3fffffff"/>
+  </Style>
+  <!-- <Style Selector="TextBox Border:focus">
+    <Setter Property="Background" Value="#3fffffff"/>
+  </Style>
+  <Style Selector="TextBox Border:focus-within">
+    <Setter Property="Background" Value="#3fffffff"/>
+  </Style>
+  <Style Selector="TextBox Border:focus-visible">
+    <Setter Property="Background" Value="#3fffffff"/>
+  </Style> -->
+</Styles>

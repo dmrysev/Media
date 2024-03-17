@@ -1,0 +1,17 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="Media.UI.View.Avalonia.LocalMedia.Browser.ThumbnailsView">
+  <ListBox ItemsSource="{Binding Thumbnails}" SelectedIndex="{Binding SelectedIndex.Value}" SelectionMode="AlwaysSelected">
+    <ListBox.ItemsPanel>
+      <ItemsPanelTemplate>
+        <WrapPanel ItemWidth="{Binding ThumbnailWidth}" ItemHeight="{Binding ThumbnailHeight}">
+          <WrapPanel.ContextMenu>
+            <ContextMenu ItemsSource="{Binding MenuItems}" Classes="dynamicMenu" />
+          </WrapPanel.ContextMenu>
+        </WrapPanel>
+      </ItemsPanelTemplate>
+    </ListBox.ItemsPanel>
+  </ListBox>  
+</UserControl>

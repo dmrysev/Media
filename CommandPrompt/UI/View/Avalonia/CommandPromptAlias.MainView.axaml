@@ -1,0 +1,16 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Class="Media.UI.View.Avalonia.CommandPromptAlias.MainView"
+        x:Name="CommandPromptAlias">
+  <DockPanel>
+    <Menu DockPanel.Dock="Top" IsVisible="False">
+      <MenuItem Header="Up" InputGesture="Up" HotKey="Up" Command="{Binding UpKey}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem Header="Down" InputGesture="Down" HotKey="Down" Command="{Binding DownKey}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem Header="Enter" InputGesture="Enter" HotKey="Enter" Command="{Binding EnterKey}" IsEnabled="{Binding IsFocused}"/>
+    </Menu>
+    <TextBox DockPanel.Dock="Top" Margin="10 0 10 0" Name="CommandPromptInput" Watermark="Command prompt alias" Text="{Binding Input}" FontSize="12" VerticalContentAlignment="Center" />
+    <ListBox DockPanel.Dock="Top" Margin="10 0 10 10" Name="AutoCompletion" ItemsSource="{Binding AutoCompletionItems}" SelectedIndex="{Binding SelectedAutoCompletionIndex}" FontSize="6" AutoScrollToSelectedItem="True" MaxHeight="120" />
+  </DockPanel>
+</UserControl>

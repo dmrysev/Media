@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Application.fs" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\API\Media.API.Application.fsproj" />
+    <ProjectReference Include="..\..\LocalMedia\IO\Media.IO.LocalMedia.fsproj" />
+    <ProjectReference Include="..\..\RemoteMedia\IO\Media.IO.RemoteMedia.fsproj" />
+    <ProjectReference Include="..\..\Resource\IO\Media.IO.Resource.fsproj" />
+    <ProjectReference Include="..\..\FileSystem\IO\Media.IO.FileSystem.fsproj" />
+    <ProjectReference Include="..\..\Diagnostics\Core\Media.Core.Diagnostics.fsproj" />
+    <ProjectReference Include="..\..\Diagnostics\IO\Media.IO.Diagnostics.fsproj" />
+  </ItemGroup>
+
+</Project>

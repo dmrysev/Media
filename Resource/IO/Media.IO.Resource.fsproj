@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Resource.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\API\Media.API.Resource.fsproj" />
+    <ProjectReference Include="..\..\Util\IO\FSharpUtil.IO.fsproj" />
+  </ItemGroup>
+
+</Project>

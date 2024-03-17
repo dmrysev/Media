@@ -1,0 +1,30 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Media.Application.Avalonia.View.MainWindow"
+        x:Name="MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Media"
+        Width="{Binding Width, Mode=TwoWay}" 
+        Height="{Binding Height, Mode=TwoWay}"
+        TransparencyLevelHint="AcrylicBlur"
+        Background="#2b2b2b"
+        ExtendClientAreaToDecorationsHint="True">
+  <StackPanel Orientation="Vertical">
+    <Menu IsVisible="False">
+      <MenuItem InputGesture="Ctrl+E" HotKey="Ctrl+E" Command="{Binding FocusCommandPrompt}"/>
+      <MenuItem InputGesture="Ctrl+F" HotKey="Ctrl+F" Command="{Binding FocusCommandPromptAlias}"/>
+      <MenuItem InputGesture="Ctrl+G" HotKey="Ctrl+G" Command="{Binding FocusMediaBrowser}"/>
+      <MenuItem InputGesture="Ctrl+S" HotKey="Ctrl+S" Command="{Binding MediaBrowserPreviousItem}"/>
+      <MenuItem InputGesture="Ctrl+D" HotKey="Ctrl+D" Command="{Binding MediaBrowserNextItem}"/>
+      <MenuItem InputGesture="Ctrl+Y" HotKey="Ctrl+Y" Command="{Binding FocusInfoOutput}"/>
+      <MenuItem InputGesture="Ctrl+H" HotKey="Ctrl+H" Command="{Binding FocusFileSystemBrowser}"/>
+      <MenuItem InputGesture="Ctrl+I" HotKey="Ctrl+I" Command="{Binding FocusImageSet}"/>
+    </Menu>
+    <UserControl Content="{Binding CommandPrompt}" IsVisible="{Binding IsCommandPromptVisible}"/>
+    <UserControl Content="{Binding CommandPromptAlias}" IsVisible="{Binding IsCommandPromptAliasVisible}"/>
+    <UserControl Name="MainContent" Content="{Binding MainContent}" />
+  </StackPanel>
+</Window>

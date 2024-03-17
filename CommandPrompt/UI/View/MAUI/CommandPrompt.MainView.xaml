@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="Media.UI.View.MAUI.CommandPrompt.MainView">
+  <VerticalStackLayout WidthRequest="{Binding Width}">
+    <Entry Text="{Binding Input, Mode=TwoWay}" CursorPosition="{Binding CursorPosition, Mode=TwoWay}" BackgroundColor="White"/>
+    <ListView ItemsSource="{Binding AutoCompletionItems}" SelectedItem="{Binding SelectedAutoCompletionItem}" HeightRequest="120" IsVisible="True" BackgroundColor="White"/>
+  </VerticalStackLayout>
+</ContentView>

@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="ComicBook.fs" />
+    <Compile Include="ImageSet.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fody" Version="6.8.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\FileSystem\API\Media.API.FileSystem.fsproj" />
+    <ProjectReference Include="..\..\..\FileSystem\Core\Media.Core.FileSystem.fsproj" />
+    <ProjectReference Include="..\..\..\Session\API\Media.API.Session.fsproj" />
+    <ProjectReference Include="..\..\..\Resource\API\Media.API.Resource.fsproj" />
+    <ProjectReference Include="..\..\..\CommandPrompt\API\Media.API.CommandPrompt.fsproj" />
+    <ProjectReference Include="..\..\..\UI\Core\Media.UI.Core.fsproj" />
+  </ItemGroup>
+
+</Project>

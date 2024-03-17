@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="Media.UI.View.Avalonia.ImageSet.MainView">
+  <Canvas Width="{Binding ImageWidth}" Height="{Binding ImageHeight}">
+    <UserControl Content="{Binding CurrentImage}" Width="{Binding ImageWidth}" Height="{Binding ImageHeight}" Canvas.Right="{Binding ImagePositionX}" Canvas.Bottom="{Binding ImagePositionY}" />
+    <Menu IsVisible="False">
+      <MenuItem InputGesture="Left" HotKey="Left" Command="{Binding PreviousImage}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Right" HotKey="Right" Command="{Binding NextImage}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Ctrl+Up" HotKey="Ctrl+Up" Command="{Binding MoveUp}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Ctrl+Down" HotKey="Ctrl+Down" Command="{Binding MoveDown}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Ctrl+Left" HotKey="Ctrl+Left" Command="{Binding MoveLeft}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Ctrl+Right" HotKey="Ctrl+Right" Command="{Binding MoveRight}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="l" HotKey="l" Command="{Binding ZoomIn}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="k" HotKey="k" Command="{Binding ZoomOut}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Delete" HotKey="Delete" Command="{Binding Delete}" IsEnabled="{Binding IsFocused}"/>
+    </Menu>
+  </Canvas>
+</UserControl>

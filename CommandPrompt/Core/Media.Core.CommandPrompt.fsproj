@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="CommandPrompt.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\API\Media.API.CommandPrompt.fsproj" />
+    <ProjectReference Include="..\..\Diagnostics\API\Media.API.Diagnostics.fsproj" />
+  </ItemGroup>
+
+</Project>

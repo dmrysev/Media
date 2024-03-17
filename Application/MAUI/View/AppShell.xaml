@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Media.Application.MAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Media.Application.MAUI"
+    Shell.FlyoutBehavior="Flyout"
+    Title="Media">
+
+    <ShellContent
+        Title="Main"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <!-- <ShellContent
+        Title="Comic book"
+        ContentTemplate="{DataTemplate local:ComicBook.MainView}"
+        Route="ComicBook" /> -->
+        
+    <!-- <MenuItem Text="Open browser" Clicked="OnOpenBrowser_Clicked" />  -->
+    <MenuItem Text="Quit" Clicked="OnQuit_Clicked" /> 
+
+</Shell>

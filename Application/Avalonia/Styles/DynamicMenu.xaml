@@ -1,0 +1,21 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Style Selector="ContextMenu.dynamicMenu MenuItem">
+    <Setter Property="Header" Value="{Binding Header}"/>
+    <Setter Property="ItemsSource" Value="{Binding Items}"/>
+    <Setter Property="Command" Value="{Binding Command}"/>
+    <Setter Property="CommandParameter" Value="{Binding CommandParameter}"/>
+  </Style>
+  <Style Selector="Menu.dynamicMenu MenuItem">
+    <Setter Property="Header" Value="{Binding Header}"/>
+    <Setter Property="ItemsSource" Value="{Binding Items}"/>
+    <Setter Property="Command" Value="{Binding Command}"/>
+    <Setter Property="CommandParameter" Value="{Binding CommandParameter}"/>
+  </Style>
+  <Style Selector="MenuItem.dynamicMenu MenuItem">
+    <Setter Property="Header" Value="{Binding Header}"/>
+    <Setter Property="ItemsSource" Value="{Binding Items}"/>
+    <Setter Property="Command" Value="{Binding Command}"/>
+    <Setter Property="CommandParameter" Value="{Binding CommandParameter}"/>
+  </Style>
+</Styles>

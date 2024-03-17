@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="CoreApplication.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\IO\Media.IO.Application.fsproj" />
+    <ProjectReference Include="..\..\UI\Core\Media.Application.UI.Core.fsproj" />
+  </ItemGroup>
+
+</Project>

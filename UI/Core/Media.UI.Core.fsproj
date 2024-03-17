@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Command.fs" />
+    <Compile Include="MenuItemViewModel.fs" />
+    <Compile Include="ImageViewModel.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="ViewModelBase\Media.UI.Core.ViewModelBase.csproj" />
+    <ProjectReference Include="..\..\Diagnostics\API\Media.API.Diagnostics.fsproj" />
+  </ItemGroup>
+
+</Project>

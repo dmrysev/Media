@@ -1,0 +1,36 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="Media.UI.View.Avalonia.FileSystem.Browser.MainView">
+  <Panel>
+    <ListBox Name="FileSystemEntriesListBox" ItemsSource="{Binding FileSystemEntries}" SelectedIndex="{Binding SelectedIndex}" SelectionMode="AlwaysSelected,Multiple">
+      <ListBox.ItemTemplate>
+        <DataTemplate>
+          <Panel>
+            <UserControl Content="{Binding Thumbnail}" />
+            <TextBlock Text="{Binding Name}" FontSize="12" TextWrapping="Wrap" Background="Black" Opacity="70" VerticalAlignment="Top"/>
+          </Panel>
+        </DataTemplate>
+      </ListBox.ItemTemplate>
+      <ListBox.ItemsPanel>
+        <ItemsPanelTemplate>
+          <WrapPanel ItemWidth="{Binding EntryWidth}" ItemHeight="{Binding EntryHeight}">
+          </WrapPanel>
+        </ItemsPanelTemplate>
+      </ListBox.ItemsPanel>
+    </ListBox>  
+    <Menu IsVisible="False">
+      <MenuItem InputGesture="Ctrl+S" HotKey="Ctrl+S" Command="{Binding PreviousItem}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Ctrl+D" HotKey="Ctrl+D" Command="{Binding NextItem}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Left" HotKey="Left" Command="{Binding PreviousItem}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Right" HotKey="Right" Command="{Binding NextItem}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Ctrl+Left" HotKey="Ctrl+Left" Command="{Binding PreviousPage}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Ctrl+Right" HotKey="Ctrl+Right" Command="{Binding NextPage}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Ctrl+O" HotKey="Ctrl+O" Command="{Binding OpenSelected}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Enter" HotKey="Enter" Command="{Binding OpenSelected}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Back" HotKey="Back" Command="{Binding NavigateBackward}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Delete" HotKey="Delete" Command="{Binding DeleteSelected}" IsEnabled="{Binding IsFocused}"/>
+    </Menu>
+  </Panel>
+</UserControl>

@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="Media.UI.View.Avalonia.LocalMedia.Browser.MainView">
+  <Panel>
+    <UserControl Content="{Binding OutputViewModel}"/>
+    <Menu IsVisible="False">
+      <MenuItem InputGesture="Left" HotKey="Left" Command="{Binding PreviousItem}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Right" HotKey="Right" Command="{Binding NextItem}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Ctrl+Left" HotKey="Ctrl+Left" Command="{Binding PreviousPage}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Ctrl+Right" HotKey="Ctrl+Right" Command="{Binding NextPage}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Ctrl+T" HotKey="Ctrl+T" Command="{Binding SetThumbnailsView}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Ctrl+R" HotKey="Ctrl+R" Command="{Binding SetPreviewView}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Ctrl+O" HotKey="Ctrl+O" Command="{Binding Open}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Enter" HotKey="Enter" Command="{Binding Open}" IsEnabled="{Binding IsFocused}"/>
+      <MenuItem InputGesture="Delete" HotKey="Delete" Command="{Binding Delete}" IsEnabled="{Binding IsFocused}"/>
+    </Menu>
+  </Panel>
+</UserControl>

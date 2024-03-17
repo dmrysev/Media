@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="MainWindow.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\API\Media.API.Application.fsproj" />
+    <ProjectReference Include="..\..\..\Diagnostics\UI\Core\Media.UI.Core.Diagnostics.fsproj" />
+    <ProjectReference Include="..\..\..\FileSystem\UI\Core\Media.UI.Core.FileSystem.fsproj" />
+    <ProjectReference Include="..\..\..\LocalMedia\UI\Core\Media.UI.Core.LocalMedia.fsproj" />
+    <ProjectReference Include="..\..\..\ImageSet\UI\Core\Media.UI.Core.ImageSet.fsproj" />
+    <ProjectReference Include="..\..\..\RemoteMedia\UI\Core\Media.UI.Core.RemoteMedia.fsproj" />
+    <ProjectReference Include="..\..\..\Session\UI\Core\Media.UI.Core.Session.fsproj" />
+    <ProjectReference Include="..\..\..\CommandPrompt\UI\Core\Media.UI.Core.CommandPrompt.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fody" Version="6.8.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
